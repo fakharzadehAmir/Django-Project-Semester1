@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>STEP 3(Connection)</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+  .tablebuy{
+    background-color: gainsboro ;
+    color: dimgray  ;
+    border: 3px solid dimgray  ;
+    margin: 1px;
+    padding: 3px;
+  border-radius: 6px;
+  }
+  			.fa {
+			padding: 25px;
+			font-size: 30px;
+			width: 20px;
+			text-align: center;
+			text-decoration: none;
+			margin: 5px 2px;
+			}
+			.fa:hover{
+				color: silver;
+			}
+			.fa-twitter {
+			background: slategray;
+			color: gainsboro;
+			}
+
+			.fa-google {
+			background: slategray;
+			color: gainsboro;
+			}
+
+			.fa-linkedin {
+			background: slategray;
+			color: gainsboro;
+			}
+
+</style>
+</head>
+<body style="background-color:slategray  ;color:gainsboro  ;padding:70px;">
+    <div class="container">
+    <a href="https://twitter.com/AmirrrFakharrr" class="fa fa-twitter" style="text-decoration: none;"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<a href="mailto: amirfakharzadeh2002@gmail.com" class="fa fa-google" style="text-decoration: none;"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<a href="https://www.linkedin.com/in/amir-fakharzadeh-a7a7931bb" class="fa fa-linkedin" style="text-decoration: none;"></a><br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Genre</th>
+                <th>Instrument</th>
+                <th>Nationality</th>
+                <th>Email</th>
+                <th>Connect</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in musician %}
+            <tr>
+                <td>{{ i.bname }}</td>
+                <td>{{ i.bgenre }}</td>
+                <td>{{ i.binstrument }}</td>
+                <td>{{ i.bnationality }}</td>
+                <td>{{ i.bemail }}</td>
+                <td><a href = "mailto: {{ i.bemail }}" type="button" class="btn btn-success">Connect</a></td>
+            </tr>
+            {% endfor %}<br>
+        </tbody>
+    </table>
+    </div>
+    </body>
+</html>

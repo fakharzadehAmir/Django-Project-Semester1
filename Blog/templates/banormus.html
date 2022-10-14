@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Let's Play Some Tunes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:slategray  ;color:dimgray ;padding:200px;">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <form action = "{% url 'banormus' %}">
+            <h1>Band or Musician ?</h1>      
+            <p>Are you searching for a music band or you want a musician for your band?<br>
+            Find your bandmates !!!</p><br>
+        
+              <a href="band/" type="button" class="btn btn-secondary btn-block">We're a Band!</a>
+              <a href="musician/" type="button" class="btn btn-secondary btn-block">I'm a Musician!</a>
+        </div>
+</div>
+</form>
+</body>
+</html>
